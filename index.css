@@ -9,9 +9,7 @@ body {
 
 .taskDateDiv {
     font-family: Arial, Helvetica, sans-serif;
-    /* color: white; */
     padding: 8px;
-    /* background-color: #04AA6D; */
     font-size: 75%;
     border-top: tomato 2px solid;
 }

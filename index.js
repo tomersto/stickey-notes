@@ -1,3 +1,12 @@
+/* Notes 
+things left to do : 
+add localStorage functionality. (in later stages, show tasks on board according to localStorage state.)
+add x button to task component.
+add functionality to x button by targeting task.id to deleted specific component.
+add validation to form. 
+style the page properly to ensure higher grade. (and the project in general)
+*/
+
 const formEl = document.querySelector('#form')
 
 const containerDiv = document.createElement('div')

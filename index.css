@@ -7,12 +7,33 @@ body {
    margin-top: 6%;
 }
 
+.taskDateDiv {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 8px;
+    font-size: 75%;
+    border-top: tomato 2px solid;
+}
+
 label {
     margin-top: 50px;
     color: white;
     padding: 8px;
     background-color: #04AA6D;
     border-radius: 7%
+}
+
+.task {
+    display: flex;
+   background-image : url('notebg.png');
+   flex-wrap: wrap;
+   flex-direction: column;
+   height : "20%"
+}
+
+.containerDiv {
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .deleteButton {
@@ -23,6 +44,8 @@ label {
   height: 32px;
   opacity: 0.3;
 }
+
+
 .close:hover {
   opacity: 1;
 }

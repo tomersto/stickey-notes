@@ -1,71 +1,48 @@
 body {
     background-image: url(tile.jpg) ;
-}
-
-.header  { 
+  }
+  .header  { 
    text-align: center;
    margin-top: 6%;
-}
-
-.taskDateDiv {
+  }
+  
+  .taskDateDiv {
     font-family: Arial, Helvetica, sans-serif;
+    /* color: white; */
     padding: 8px;
+    /* background-color: #04AA6D; */
     font-size: 75%;
     border-top: tomato 2px solid;
-}
-
-label {
+  }
+  label {
     margin-top: 50px;
     color: white;
     padding: 8px;
     background-color: #04AA6D;
     border-radius: 7%
-}
-
-.task {
+  }
+  .task {
     display: flex;
    background-image : url('notebg.png');
    flex-wrap: wrap;
    flex-direction: column;
-   height : "20%"
-}
-
-.containerDiv {
+   height : "20%";
+   -webkit-animation : fadein 2s;
+    }
+  .containerDiv {
     height: 400px;
     display: flex;
     flex-wrap: wrap;
-}
-
-.deleteButton {
+  }
+  .deleteButton {
     position: absolute;
   right: 32px;
   top: 32px;
   width: 32px;
   height: 32px;
   opacity: 0.3;
-}
-
-
-.close:hover {
-  opacity: 1;
-}
-.close:before, .close:after {
-  position: absolute;
-  left: 15px;
-  content: ' ';
-  height: 33px;
-  width: 2px;
-  background-color: #333;
-}
-.close:before {
-  transform: rotate(45deg);
-}
-.close:after {
-  transform: rotate(-45deg);
-}
-
-
-.board{
+  }
+  .board{
     margin: auto;
     margin-top: 3%;
     display: flex;
@@ -74,13 +51,11 @@ label {
     background-image: url("./formbg.jpg");
     width: 50%;
     height: 70px;
-}
-.buttons {
+  }
+  .buttons {
     margin-top: 10%;
-}
-
-
-.input {
+  }
+  .input {
     margin-top: 12%;
     width: 300px;
     background: rgba(255,255,255,.5);
@@ -89,35 +64,28 @@ label {
     box-sizing: border-box;
     background: static;
     position : relative;
-
-    /* background: transparent;
-    border: none; */
-}
-
-#missioninput {
+    margin-right: 30px;
+  }
+  #missioninput {
     margin-top: 5%;
-}
-
-
-
-.board1 {
+  }
+  .board1 {
     display: flex;
     justify-content: center;
     margin: auto;
     background-image: url("./formbg.jpg");
     width: 50%;
     height: 70px;
-}
-
-.board2 {
+  }
+  .board2 {
     display: flex;
     justify-content: center;
     margin: auto;
     height: 70px;
     background-image: url("./formbg.jpg");
     width: 50%;
-}
-.board3 {
+  }
+  .board3 {
     display: flex;
     justify-content: center;
     margin: auto;
@@ -125,4 +93,39 @@ label {
     background-image: url("./formbg.jpg");
     width: 50%;
     
+  }
+  /* .deleteButtonDiv > button:hover { filter: brightness(150%) }
+.deleteButtonDiv > button[type=submit] {
+    color: green;
+    transition: all .4s;
+} */
+/* .deleteButtonDiv > button[type=reset] {
+    color: blue;
+    transition: all .4s;
+}
+.deleteButton:hover { 
+  color:rgba(0, 0, 0, 0.8) 
+} */
+
+  .deleteButtonDiv button {
+    margin-top: 5px;
+    float: right;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.5em;
+
+  }
+  @keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-webkit-keyframes fadein { 
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
 }

@@ -94,20 +94,8 @@ body {
     width: 50%;
     
   }
-  /* .deleteButtonDiv > button:hover { filter: brightness(150%) }
-.deleteButtonDiv > button[type=submit] {
-    color: green;
-    transition: all .4s;
-} */
-/* .deleteButtonDiv > button[type=reset] {
-    color: blue;
-    transition: all .4s;
-}
-.deleteButton:hover { 
-  color:rgba(0, 0, 0, 0.8) 
-} */
-
   .deleteButtonDiv button {
+    opacity: 0%;
     margin-top: 5px;
     float: right;
     cursor: pointer;
@@ -116,6 +104,9 @@ body {
     color: rgba(0, 0, 0, 0.6);
     font-size: 1.5em;
 
+  }
+  .task:hover button {
+    opacity: 100%;
   }
   @keyframes fadein {
     from { opacity: 0; }

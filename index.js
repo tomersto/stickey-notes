@@ -22,7 +22,7 @@ formEl.addEventListener("submit", (e) => {
     return;
   }
   saveToLocalStorage(missionDetails)
-  loadFromLocalStorage()
+  loadFromLocalStorage(missionDetails)
 
   hourInput.value = ""
   dateInput.value = ""
@@ -68,10 +68,15 @@ const createTask = (missionDetails) => {
 
 };
 
-function loadFromLocalStorage() {
+function loadFromLocalStorage(missionDetails) {
+  console.log(missionDetails)
+  // if(missionDetails.date >  ) add validation for not loading tasks that are overdue using Date MDN.
+  const today = new Date()
+  // console.log(missionDetails.date.value)
+  console.log(today)
   containerDiv.innerHTML = ""
   const data = JSON.parse(localStorage.getItem(storageValue)) || [];
-  console.log(data)
+  // console.log(data)
   data.forEach(task => {
     containerDiv.appendChild(createTask(task))
   })
@@ -89,16 +94,11 @@ function saveToLocalStorage(data) {
 }
 
 function removeTask(id) {
-  console.log(id)
   const taskToDelete = document.getElementById(id)
   removeFromLocalStorage(id)
   taskToDelete.remove()
 }
 loadFromLocalStorage()
-
-function autoRemoveTask() {
-  setTimeout()
-}
 
 function removeFromLocalStorage(id) {
   const existingData = JSON.parse(getLocalStorageItem(storageValue)) || [];
@@ -106,11 +106,6 @@ function removeFromLocalStorage(id) {
     if (existingData[i].id == id)
       existingData.splice(i, 1)
   }
-  // existingData.forEach(task => {
-  //   if(task.id == id){
-  //     existingData.splice(index, 1)
-  //   }
-  // })
   localStorage.setItem(storageValue, JSON.stringify(existingData))
 }
 
